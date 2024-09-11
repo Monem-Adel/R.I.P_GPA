@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>iconRIPGPA2.png</file>
+        <file>iconRIPGPA2.ico</file>
+    </qresource>
+</RCC>

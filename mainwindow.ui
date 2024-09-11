@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>350</width>
+    <height>547</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>350</width>
+    <height>547</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>350</width>
+    <height>547</height>
+   </size>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/*QMainWindow {
+background-color: #414141;
+border-radius: 25px;
+}*/</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="gpaTermGB">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>107</y>
+      <width>331</width>
+      <height>285</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Maximum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>510</width>
+      <height>303</height>
+     </size>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::NoContextMenu</enum>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+    /* Make the group box flat with only a top border */
+    border: 1px solid transparent; /* Initially transparent border */
+    border-top-color: #df5324; /* White top border */
+  border-bottom-color: #df5324; /* White top border */
+    border-radius: 5px; /* Optional: rounded corners */
+    margin-top: 20px; /* Space for the title text */
+	font-weight: bold
+}
+
+QGroupBox::title {
+    /* Style the title text */
+    color: #ffffff; /* White title text */
+    subcontrol-origin: margin; /* Title text starts from margin */
+    subcontrol-position: top center; /* Center the title text */
+    padding: 0 10px; /* Optional: some padding around the title */
+    background-color: transparent; /* No background color for the title */
+}
+QGroupBox QLabel {
+    /* Style the labels inside the group box */
+    color: #ffffff; /* White text for labels */
+}
+
+QGroupBox QPushButton {
+ background-color: #df5324; 
+color: white; 
+border-radius: 4px; 
+padding: 4px 8px; }
+QGroupBox QPushButton:hover { 
+background-color: #cc481b; }
+
+QGroupBox QCheckBox {
+    color: white; /* Set the label text color to white */
+}
+
+QGroupBox QCheckBox::indicator {
+    width: 11px; /* Default checkbox size */
+    height: 11px; /* Default checkbox size */
+    border-radius: 2px; /* Rounded corners */
+    border: 1px solid gray; /* Default border color */
+    background-color: white; /* Background color when not checked */
+}
+
+QGroupBox QCheckBox::indicator:checked {
+    background-color: #df5324; /* Color of the check sign */
+    border: 1px solid #df5324; /* Border color when checked */
+}
+
+QGroupBox QCheckBox::indicator:hover {
+    border: 1px solid #df5324; /* Hover border color */
+}
+
+/*QGroupBox QComboBox{
+	background-color: #df5324;
+	border-radius: 2px;
+}*/
+
+QGroupBox #hLine{
+color:#df5324;
+ border: 2px solid #df5324;;
+ width: 50%;}</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>2</y>
+      <width>331</width>
+      <height>102</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="HL_top">
+     <property name="spacing">
+      <number>7</number>
+     </property>
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMinimumSize</enum>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>1</number>
+     </property>
+     <item>
+      <layout class="QVBoxLayout" name="VL_obtion">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetMinAndMaxSize</enum>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>6</number>
+       </property>
+       <item alignment="Qt::AlignVCenter">
+        <widget class="QLabel" name="whatLbl">
+         <property name="maximumSize">
+          <size>
+           <width>145</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {color:white;font-weight:bold}</string>
+         </property>
+         <property name="text">
+          <string>&lt;b&gt;What will you calculate ?&lt;/b&gt;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+         </property>
+         <property name="indent">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="VL_rbBtns">
+         <property name="spacing">
+          <number>5</number>
+         </property>
+         <property name="sizeConstraint">
+          <enum>QLayout::SetMinimumSize</enum>
+         </property>
+         <property name="leftMargin">
+          <number>8</number>
+         </property>
+         <item>
+          <widget class="QRadioButton" name="gpaTermRB">
+           <property name="maximumSize">
+            <size>
+             <width>110</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QRadioButton{
+	color:white;
+}
+QRadioButton::indicator:checked {
+    /* Style the radio button when checked */
+    width: 10px;  /* Ensure the same size when checked */
+    height: 10px;  /* Ensure the same size when checked */
+    border-radius: 5px;  /* Maintain the same radius */
+    background-color: #df5324;  
+    border: px solid #df5324;
+}
+
+QRadioButton::indicator:unchecked:hover {
+    /* Style the radio button when hovered */
+	width: 10px;  /* Ensure the same size when checked */
+    height: 10px;  /* Ensure the same size when checked */
+    border-radius: 5px;  /* Maintain the same radius */
+    background-color: #edbcac; 
+}
+</string>
+           </property>
+           <property name="text">
+            <string>GPA's Semester</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="cgpaRB">
+           <property name="maximumSize">
+            <size>
+             <width>110</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QRadioButton{
+	color:white;
+}
+QRadioButton::indicator:checked {
+    /* Style the radio button when checked */
+    width: 10px;  /* Ensure the same size when checked */
+    height: 10px;  /* Ensure the same size when checked */
+    border-radius: 5px;  /* Maintain the same radius */
+    background-color: #df5324;  
+    border: px solid #df5324;
+}
+
+QRadioButton::indicator:unchecked:hover {
+    /* Style the radio button when hovered */
+	width: 10px;  /* Ensure the same size when checked */
+    height: 10px;  /* Ensure the same size when checked */
+    border-radius: 5px;  /* Maintain the same radius */
+    background-color: #edbcac; 
+}
+</string>
+           </property>
+           <property name="text">
+            <string>CGPA for Levels</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="newCgpaRB">
+           <property name="maximumSize">
+            <size>
+             <width>180</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QRadioButton{
+	color:white;
+}
+QRadioButton::indicator:checked {
+    /* Style the radio button when checked */
+    width: 10px;  /* Ensure the same size when checked */
+    height: 10px;  /* Ensure the same size when checked */
+    border-radius: 5px;  /* Maintain the same radius */
+    background-color: #df5324;  
+    border: px solid #df5324;
+}
+
+QRadioButton::indicator:unchecked:hover {
+    /* Style the radio button when hovered */
+	width: 10px;  /* Ensure the same size when checked */
+    height: 10px;  /* Ensure the same size when checked */
+    border-radius: 5px;  /* Maintain the same radius */
+    background-color: #edbcac; 
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Add New Semester to CGPA</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="hintLbl">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>140</width>
+         <height>105</height>
+        </size>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#hintLbl {
+   background-color: white;
+  	border-radius: 20px;
+	border: 0.5px solid #df5324;
+}</string>
+       </property>
+       <property name="lineWidth">
+        <number>0</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;HINT&lt;/span&gt;&lt;br/&gt;Grade Point Equivalence&lt;br/&gt;A ≡ 4.00 A- ≡ 3.67&lt;br/&gt;B+ ≡ 3.33 B ≡ 3.00&lt;br/&gt;C+ ≡ 2.67 C ≡ 2.33&lt;br/&gt;D ≡ 2.00&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::MarkdownText</enum>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="margin">
+        <number>0</number>
+       </property>
+       <property name="indent">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>400</y>
+      <width>331</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMinimumSize</enum>
+     </property>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="spacing">
+        <number>5</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetFixedSize</enum>
+       </property>
+       <item>
+        <widget class="QLabel" name="resultLbl">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>80</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel { font-size: 11pt; font-weight: bold; color:white; }</string>
+         </property>
+         <property name="text">
+          <string>&lt;b&gt; The Result &lt;/b&gt;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QTextBrowser" name="desplayResultTxt">
+       <property name="maximumSize">
+        <size>
+         <width>329</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTextBrowser { border: 1px solid #df5324; 
+border-radius: 4px; 
+padding: 4px; }</string>
+       </property>
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="calBtn">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>35</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>1150</width>
+         <height>101</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+ background-color: #df5324; 
+color: white; 
+border-radius: 4px; 
+padding: 6px 12px; }
+QPushButton:hover { 
+background-color: #cc481b; }</string>
+       </property>
+       <property name="text">
+        <string>Calculate</string>
+       </property>
+       <property name="shortcut">
+        <string>Enter</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
